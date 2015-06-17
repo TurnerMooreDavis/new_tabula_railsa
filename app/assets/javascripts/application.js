@@ -14,3 +14,11 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
+
+function checkSession(session,button){
+  if (session === true) {
+    button.disabled = true;
+  } else {
+    button.submit();
+  }
+}

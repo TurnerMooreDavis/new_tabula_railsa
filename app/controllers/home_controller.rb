@@ -9,6 +9,7 @@ class HomeController < ApplicationController
 
     respond_to do |format|
       if @survey.save
+        session[:disable_save] = true;
         format.html { redirect_to home_path(@survey), notice: 'Survey was successfully created.' }
         format.json { render :show, status: :created, location: @survey }
       else
