@@ -18,6 +18,9 @@
 function checkSession(session,button){
   if (session === true) {
     button.disabled = true;
+    alert ("trigger");
+    var url = document.location.hostname;
+    window.location.replace(url);
   } else {
     button.submit();
   }

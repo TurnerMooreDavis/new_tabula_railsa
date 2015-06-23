@@ -23,6 +23,9 @@ class HomeController < ApplicationController
     @survey = Survey.find(params[:id])
   end
 
+  def taken
+  end
+
 
 
   private def survey_params
