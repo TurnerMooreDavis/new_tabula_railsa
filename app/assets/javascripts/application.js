@@ -12,7 +12,6 @@
 //
 //= require jquery
 //= require jquery_ujs
-//= require turbolinks
 //= require_tree .
 
 function checkSession(session,button){
@@ -25,3 +24,11 @@ function checkSession(session,button){
     button.submit();
   }
 }
+function hideCheckboxes(){
+  $(".checkbox").hide();
+}
+function showCheckboxes(){
+  $(".checkbox").show();
+}
+
+$(hideCheckboxes);

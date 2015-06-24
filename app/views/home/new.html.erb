@@ -1,13 +1,24 @@
 <%= form_for(@survey, url: home_index_path) do |f|%>
   <div>
-    Name: <%= f.text_field :name %>
+    Name: <%= f.text_field :name, onkeypress: "showCheckboxes();" %>
   </div>
   <div>
-    Favorites:<br>
-    <%= f.check_box :chocolate %> Chocolate<br>
-    <%= f.check_box :rainbow %> Rainbows<br>
-    <%= f.check_box :puppies %> Puppies<br>
-    <%= f.check_box :cash %> Cold Hard Cash<br>
+    Favorites:
+    <div class="checkbox">
+      <%= f.check_box :chocolate %> Chocolate
+    </div>
+    <div class="checkbox">
+      <%= f.check_box :rainbow %> Rainbows<br>
+    </div>
+
+    <div class="checkbox">
+      <%= f.check_box :puppies %> Puppies<br>
+    </div>
+
+    <div class="checkbox">
+      <%= f.check_box :cash %> Cold Hard Cash<br>
+    </div>
+
   </div>
     <%= f.submit onclick: "checkSession(#{session[:disable_save]}, this);"%>
 <% end %>
